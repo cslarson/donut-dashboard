@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import DonutLogo from './img/donut-logo.png';
+import EthtraderDonutsLogo from './img/ethtraderdonuts.png';
+import Ticker from './components/Ticker'
+import Body from './components/Body'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header-style">
+        <div class="inline-block">
+          <img src={DonutLogo} className="App-logo" alt="logo" />   
+        </div>
+        
+        <div class="inline-block">
+          <img src={EthtraderDonutsLogo} />        
+        </div>
       </header>
+      <body className="body-style">
+        <Ticker></Ticker>
+        <Body></Body>
+      </body>
     </div>
   );
 }
