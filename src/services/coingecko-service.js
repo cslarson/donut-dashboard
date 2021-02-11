@@ -18,10 +18,16 @@ async function getDonutStats() {
             donutUSD: donutResponse.data.donut.usd,
             donutETH: donutResponse.data.donut.eth,
             usdDonut: 1 / (donutResponse.data.donut.usd),
-            ethDonut: 1 / (donutResponse.data.donut.eth)
+            ethDonut: 1 / (donutResponse.data.donut.eth),
+            usd24hr: donutResponse.data.donut.usd_24h_change,
+            eth24hr: donutResponse.data.donut.eth_24h_change, 
+            usdVolume: donutResponse.data.donut.usd_24h_vol, 
+            ethVolume: donutResponse.data.donut.eth_24h_vol, 
+            usdMarketCap: donutResponse.data.donut.usd_market_cap, 
+            ethMarketCap: donutResponse.data.donut.eth_market_cap
+
         };
 
-        console.log(donutResponse);
         return data;
     } catch (error) {
     console.error(error);
